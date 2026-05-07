@@ -150,7 +150,6 @@ jupyter notebook
 ---
 
 ## 📷 Sample Output
-(Add screenshots of before and after cleaning here)
 
 ---
 
