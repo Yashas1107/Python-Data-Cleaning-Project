@@ -1,38 +1,35 @@
-# 🧹 Python-Data-Cleaning-Project
+# 🧹 Data Cleaning Project using Python
 
 ## 📌 Project Overview
-This project demonstrates the complete data cleaning process using Python and Pandas.  
-The main objective is to transform raw, inconsistent, and messy data into a clean and structured dataset ready for analysis, visualization, and machine learning.
+This project focuses on cleaning and preprocessing raw data using Python and Pandas.  
+The dataset contained missing values, duplicate records, inconsistent formatting, and unnecessary columns which were cleaned and transformed into a structured format ready for analysis.
 
-Data cleaning is one of the most important steps in the data analysis pipeline, and this project covers real-world preprocessing techniques commonly used by Data Analysts and Data Scientists.
+Data cleaning is an essential step in Data Analytics because accurate insights depend on high-quality data.
 
 ---
 
-## 🚀 Features
-✔️ Handling missing/null values  
-✔️ Removing duplicate records  
-✔️ Standardizing column names  
-✔️ Fixing inconsistent text formatting  
-✔️ Cleaning phone numbers and emails  
-✔️ Converting data types  
-✔️ Removing unnecessary columns  
-✔️ Splitting and merging columns  
-✔️ Exporting cleaned datasets  
+## 🚀 Objectives
+- Improve data quality
+- Handle missing values
+- Remove duplicate records
+- Standardize data formatting
+- Prepare dataset for analysis and visualization
 
 ---
 
 ## 🛠️ Technologies Used
-- Python  
-- Pandas  
-- NumPy  
-- Jupyter Notebook  
+- Python
+- Pandas
+- NumPy
+- Jupyter Notebook
+- Excel / CSV Files
 
 ---
 
 ## 📂 Project Structure
 
 ```bash
-Data-Cleaning-Project/
+Data-Cleaning-Project-1/
 │
 ├── data/
 │   ├── raw_dataset.csv
@@ -50,10 +47,9 @@ Data-Cleaning-Project/
 
 ---
 
-## 📊 Data Cleaning Steps Performed
+## 🔍 Data Cleaning Steps Performed
 
 ### 1️⃣ Importing Dataset
-Loaded raw datasets using Pandas for preprocessing and analysis.
 
 ```python
 import pandas as pd
@@ -63,18 +59,19 @@ df = pd.read_csv("dataset.csv")
 
 ---
 
-### 2️⃣ Handling Missing Values
-Identified and managed null values using different techniques.
+### 2️⃣ Checking Missing Values
 
 ```python
 df.isnull().sum()
-df.dropna(inplace=True)
 ```
+
+Handled missing values using:
+- `dropna()`
+- `fillna()`
 
 ---
 
-### 3️⃣ Removing Duplicates
-Duplicate records were detected and removed to improve data quality.
+### 3️⃣ Removing Duplicate Records
 
 ```python
 df.drop_duplicates(inplace=True)
@@ -83,7 +80,6 @@ df.drop_duplicates(inplace=True)
 ---
 
 ### 4️⃣ Standardizing Text Data
-Cleaned inconsistent text formatting.
 
 ```python
 df["Name"] = df["Name"].str.title()
@@ -91,8 +87,14 @@ df["Name"] = df["Name"].str.title()
 
 ---
 
-### 5️⃣ Fixing Data Types
-Converted columns into proper data types.
+### 5️⃣ Cleaning Phone Numbers & Emails
+
+- Removed unwanted characters
+- Standardized formatting
+
+---
+
+### 6️⃣ Converting Data Types
 
 ```python
 df["Date"] = pd.to_datetime(df["Date"])
@@ -100,8 +102,15 @@ df["Date"] = pd.to_datetime(df["Date"])
 
 ---
 
-### 6️⃣ Exporting Clean Data
-Saved the cleaned dataset for further analysis.
+### 7️⃣ Removing Unnecessary Columns
+
+```python
+df.drop(columns=["Not_Useful_Column"], inplace=True)
+```
+
+---
+
+### 8️⃣ Exporting Cleaned Dataset
 
 ```python
 df.to_csv("cleaned_dataset.csv", index=False)
@@ -109,30 +118,31 @@ df.to_csv("cleaned_dataset.csv", index=False)
 
 ---
 
-## 📈 Project Outcome
+## 📊 Project Outcome
 After cleaning:
-- Data became more accurate and reliable
-- Inconsistencies were removed
+- Dataset became more accurate
+- Duplicate and null values were removed
+- Data formatting became consistent
 - Dataset became analysis-ready
-- Improved overall data quality
 
 ---
 
-## 💡 Skills Gained
-- Data preprocessing
-- Data quality assessment
-- Pandas operations
-- Real-world data handling
-- Data transformation techniques
+## 💡 Skills Demonstrated
+- Data Cleaning
+- Data Preprocessing
+- Data Transformation
+- Pandas Operations
+- Handling Missing Values
+- Data Quality Improvement
 
 ---
 
-## ▶️ How to Run the Project
+## ▶️ How to Run This Project
 
 ### Step 1: Clone Repository
 
 ```bash
-git clone https://github.com/your-username/data-cleaning-project.git
+git clone https://github.com/Yashas1107/Data-Cleaning-Project-1.git
 ```
 
 ### Step 2: Install Dependencies
@@ -141,7 +151,7 @@ git clone https://github.com/your-username/data-cleaning-project.git
 pip install -r requirements.txt
 ```
 
-### Step 3: Run Jupyter Notebook
+### Step 3: Open Jupyter Notebook
 
 ```bash
 jupyter notebook
@@ -149,7 +159,23 @@ jupyter notebook
 
 ---
 
-## 📷 Sample Output
+## 📷 Screenshots
+(Add screenshots of your project output here)
+
+Example:
+
+```markdown
+![Raw Data](screenshots/raw_data.png)
+![Cleaned Data](screenshots/cleaned_data.png)
+```
+
+---
+
+## 📈 Future Improvements
+- Add data visualization
+- Automate preprocessing pipeline
+- Perform exploratory data analysis (EDA)
+- Create dashboard using Power BI
 
 ---
 
@@ -159,10 +185,10 @@ Feel free to fork this repository and improve the project.
 
 ---
 
-## 📜 License
-This project is licensed under the MIT License.
+## ⭐ Support
+If you found this project useful, give it a ⭐ on GitHub!
 
 ---
 
-## ⭐ Support
-If you found this project useful, give it a ⭐ on GitHub!
+## 📜 License
+This project is licensed under the MIT License.
