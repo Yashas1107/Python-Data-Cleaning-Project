@@ -159,11 +159,6 @@ jupyter notebook
 
 ---
 
-## 📷 Screenshots
-
-
----
-
 ## 📈 Future Improvements
 - Add data visualization
 - Automate preprocessing pipeline
