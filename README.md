@@ -162,13 +162,6 @@ jupyter notebook
 ## 📷 Screenshots
 
 
-Example:
-
-```markdown
-![Raw Data](screenshots/raw_data.png)
-![Cleaned Data](screenshots/cleaned_data.png)
-```
-
 ---
 
 ## 📈 Future Improvements
