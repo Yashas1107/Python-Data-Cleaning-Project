@@ -160,7 +160,7 @@ jupyter notebook
 ---
 
 ## 📷 Screenshots
-(Add screenshots of your project output here)
+
 
 Example:
 
